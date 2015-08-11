@@ -50,7 +50,7 @@
 
 <body>
 
-   <div class="folium-map" id="folium_ac349346bfae40e48e5035d47f898391" style="width: 100%; height: 100%"></div>
+   <div class="folium-map" id="folium_ea218ead576947df927c4a9170f89f0f" style="width: 100%; height: 100%"></div>
 
    <script>
 
@@ -129,7 +129,7 @@
       /*
       Creates the map and adds the selected layers
       */
-      var map = L.map('folium_ac349346bfae40e48e5035d47f898391', {
+      var map = L.map('folium_ea218ead576947df927c4a9170f89f0f', {
                                        center:[42.33, -70.935],
                                        zoom: 5,
                                        maxBounds: bounds,
@@ -143,35 +143,62 @@
       //section for adding clustered markers
       
       var marker_13_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
-      var marker_13 = L.marker([42.338629677, 
-							-70.9752532511],
+      var marker_13 = L.marker([42.3565711975, 
+							-71.0468444824],
 							{'icon':marker_13_icon}
 							);
-      marker_13.bindPopup("<b>Boston, MA</b>\nCOAWST_4");
+      marker_13.bindPopup("<b>Boston, MA</b>\nNECOFS_GOM3_FVCOM");
       marker_13._popup.options.maxWidth = 300;
       clusteredmarkers.addLayer(marker_13)
+      
+      var marker_14_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_14 = L.marker([42.338629677, 
+							-70.9752532511],
+							{'icon':marker_14_icon}
+							);
+      marker_14.bindPopup("<b>Boston, MA</b>\nCOAWST_4");
+      marker_14._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_14)
+      
+      var marker_15_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_15 = L.marker([42.3534507751, 
+							-71.0513153076],
+							{'icon':marker_15_icon}
+							);
+      marker_15.bindPopup("<b>Boston, MA</b>\nNECOFS_FVCOM");
+      marker_15._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_15)
+      
+      var marker_16_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_16 = L.marker([41.8063812256, 
+							-71.4011230469],
+							{'icon':marker_16_icon}
+							);
+      marker_16.bindPopup("<b>Providence, RI</b>\nNECOFS_GOM3_FVCOM");
+      marker_16._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_16)
       
       //add the clustered markers to the group anyway
       map.addLayer(clusteredmarkers);
 
       
-      var marker_14_icon = L.AwesomeMarkers.icon({ icon: 'ok',markerColor: 'green',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
-      var marker_14 = L.marker([42.3548, 
+      var marker_17_icon = L.AwesomeMarkers.icon({ icon: 'ok',markerColor: 'green',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_17 = L.marker([42.3548, 
 							-71.0534],
-							{'icon':marker_14_icon}
+							{'icon':marker_17_icon}
 							);
-      marker_14.bindPopup("<div align='center'> Boston, MA <br><iframe src='station_8443970.html' alt='image'width='600px' height='275px' frameBorder='0'></div>");
-      marker_14._popup.options.maxWidth = 600;
-      map.addLayer(marker_14)
+      marker_17.bindPopup("<div align='center'> Boston, MA <br><iframe src='station_8443970.html' alt='image'width='600px' height='275px' frameBorder='0'></div>");
+      marker_17._popup.options.maxWidth = 600;
+      map.addLayer(marker_17)
       
-      var marker_15_icon = L.AwesomeMarkers.icon({ icon: 'ok',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
-      var marker_15 = L.marker([41.8071, 
+      var marker_18_icon = L.AwesomeMarkers.icon({ icon: 'ok',markerColor: 'green',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_18 = L.marker([41.8071, 
 							-71.4012],
-							{'icon':marker_15_icon}
+							{'icon':marker_18_icon}
 							);
-      marker_15.bindPopup("<div align='center'> Providence, RI <br><iframe src='station_8454000.html' alt='image'width='600px' height='275px' frameBorder='0'></div>");
-      marker_15._popup.options.maxWidth = 600;
-      map.addLayer(marker_15)
+      marker_18.bindPopup("<div align='center'> Providence, RI <br><iframe src='station_8454000.html' alt='image'width='600px' height='275px' frameBorder='0'></div>");
+      marker_18._popup.options.maxWidth = 600;
+      map.addLayer(marker_18)
       
 
       
