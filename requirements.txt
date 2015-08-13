@@ -2,3 +2,4 @@ mpld3
 pyoos
 utilities
 scikit-learn
+ipython-notebook
