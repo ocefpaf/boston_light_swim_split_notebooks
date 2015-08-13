@@ -30,6 +30,7 @@ Create a virtual environment and update
 
 ```bash
 ENV_NAME=ioos
+wget https://raw.githubusercontent.com/ocefpaf/boston_light_swim/master/requirements.txt
 conda create --yes -n $ENV_NAME --file requirements.txt python=2.7
 source activate $ENV_NAME
 ```
