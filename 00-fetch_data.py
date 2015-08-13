@@ -306,8 +306,8 @@ to_html(obs_data.head())
 import warnings
 from iris.exceptions import (CoordinateNotFoundError, ConstraintMismatchError,
                              MergeError)
-from utilities import (TimeoutException, quick_load_cubes, proc_cube,
-                       time_limit, is_model, get_model_name, get_surface)
+from utilities import (quick_load_cubes, proc_cube, is_model,
+                       get_model_name, get_surface)
 
 log.info(fmt(' Models '))
 cubes = dict()
@@ -316,19 +316,18 @@ with warnings.catch_warnings():
     for k, url in enumerate(dap_urls):
         log.info('\n[Reading url {}/{}]: {}'.format(k+1, len(dap_urls), url))
         try:
-            with time_limit(60*5):
-                cube = quick_load_cubes(url, name_list,
-                                        callback=None, strict=True)
-                if is_model(cube):
-                    cube = proc_cube(cube, bbox=bbox,
-                                     time=(start, stop), units=units)
-                else:
-                    log.warning("[Not model data]: {}".format(url))
-                    continue
-                cube = get_surface(cube)
-                mod_name, model_full_name = get_model_name(cube, url)
-                cubes.update({mod_name: cube})
-        except (TimeoutException, RuntimeError, ValueError,
+            cube = quick_load_cubes(url, name_list,
+                                    callback=None, strict=True)
+            if is_model(cube):
+                cube = proc_cube(cube, bbox=bbox,
+                                 time=(start, stop), units=units)
+            else:
+                log.warning("[Not model data]: {}".format(url))
+                continue
+            cube = get_surface(cube)
+            mod_name, model_full_name = get_model_name(cube, url)
+            cubes.update({mod_name: cube})
+        except (RuntimeError, ValueError,
                 ConstraintMismatchError, CoordinateNotFoundError,
                 IndexError) as e:
             log.warning('Cannot get cube for: {}\n{}'.format(url, e))
