@@ -21,7 +21,7 @@ except ImportError:
 
 run_name = '2015-08-17'
 fname = os.path.join(run_name, 'config.pkl')
-with open(fname, 'rb') as f:
+with open(fname, 'rU') as f:
     config = pickle.load(f)
 
 
@@ -35,7 +35,7 @@ except ImportError:
     import pickle
 
 fname = os.path.join(run_name, 'skill_score.pkl')
-with open(fname, 'rb') as f:
+with open(fname, 'rU') as f:
     skill_score = pickle.load(f)
 
 
@@ -82,7 +82,7 @@ bbox = config['bbox']
 units = config['units']
 run_name = config['run_name']
 
-kw = dict(zoom_start=12, line=True, states=False, secoora_stations=False)
+kw = dict(zoom_start=11, line=True, states=False, secoora_stations=False)
 mapa = make_map(bbox, **kw)
 
 

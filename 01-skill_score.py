@@ -21,7 +21,7 @@ except ImportError:
 
 run_name = '2015-08-17'
 fname = os.path.join(run_name, 'config.pkl')
-with open(fname, 'rb') as f:
+with open(fname, 'rU') as f:
     config = pickle.load(f)
 
 
@@ -164,7 +164,7 @@ html
 # In[8]:
 
 fname = os.path.join(run_name, 'skill_score.pkl')
-with open(fname,'wb') as f:
+with open(fname, 'wb') as f:
     pickle.dump(skill_score, f)
 
 
