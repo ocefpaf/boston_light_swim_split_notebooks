@@ -1,5 +1,7 @@
 # Boston light swim
 
+[![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/repo/ocefpaf/boston_light_swim)
+
 Sea Surface Temperature forecast for the Boston Light Swim
 
 
