@@ -1,6 +1,6 @@
 name: boston_light_swim
 channels:
-  - ioos
+  - conda-forge
 dependencies:
   - mpld3
   - pyoos
