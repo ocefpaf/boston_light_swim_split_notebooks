@@ -23,9 +23,9 @@ export PATH=/$HOME/miniconda/bin:$PATH
 conda update --yes conda
 ```
 
-Add the IOOS channels
+Add the conda-forge channel
 ```bash
-conda config --add channels ioos
+conda config --add channels conda-forge
 ```
 
 Create a virtual environment and update
