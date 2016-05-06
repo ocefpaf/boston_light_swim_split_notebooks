@@ -15,14 +15,14 @@ aF-70.569999999999993
 aF42.630000000000003
 asS'run_name'
 p7
-S'2015-08-17'
+S'latest'
 p8
 sS'units'
 p9
 ccopy_reg
 _reconstructor
 p10
-(ciris.unit
+(ccf_units
 Unit
 p11
 c__builtin__
