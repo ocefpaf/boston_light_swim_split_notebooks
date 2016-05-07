@@ -3,8 +3,9 @@ channels:
   - ioos
   - conda-forge
 dependencies:
-  - mpld3
+  - python=2.7
   - pyoos
+  - mpld3
+  - jupyter
   - utilities
   - scikit-learn
-  - jupyter
