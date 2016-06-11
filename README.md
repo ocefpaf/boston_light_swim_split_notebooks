@@ -1,4 +1,9 @@
-# Boston light swim
+# This notebook is no longer supported! For the latest updates check the IOOS examples at:
+
+https://github.com/ioos/notebooks_demos
+
+## Boston light swim
+
 
 [![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/repo/ocefpaf/boston_light_swim)
 
