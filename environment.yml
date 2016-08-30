@@ -1,0 +1,12 @@
+name: ECM
+channels:
+    - conda-forge
+    - ioos
+dependencies:
+    - python=2.7
+    - iris=1.9.2
+    - mpld3
+    - pyoos
+    - utilities
+    - scikit-learn
+    - jupyter
